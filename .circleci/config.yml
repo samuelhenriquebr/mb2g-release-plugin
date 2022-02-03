@@ -36,8 +36,8 @@ jobs:
                   paths:
                       - ~/.m2
                   key: v1-dependencies-{{ checksum "pom.xml" }}
-            - run git config user.email "samuelvicosa@gmail.com"
-            - run git config user.name "Samuel Gomes"
+            - run: git config user.email "samuelvicosa@gmail.com"
+            - run: git config user.name "Samuel Gomes"
             # run tests!
             - run: mvn --batch-mode release:prepare release:perform -s .circleci/settings.xml
 
